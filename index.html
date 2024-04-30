@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-    <title>Login | DriveWorks</title>
+    <title>Login | Alumitank</title>
 
     <!-- Core Styles -->
     <link rel="stylesheet" type="text/css" href="dist/css/core.css" />
@@ -17,7 +17,11 @@
     <link rel="stylesheet" type="text/css" href="dist/css/theme/login.css" />
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <rel="favicon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Custom Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
@@ -89,7 +93,39 @@
 
         </form>
 
-        <div class="login-cover"></div>
+        <div class="login-cover">
+            <img src="dist/img/truck1.jpg" class="active" />
+            <img src="dist/img/truck2.jpg" />
+            <img src="dist/img/truck3.jpg" />
+            <img src="dist/img/truck4.jpg" />
+            <img src="dist/img/truck5.jpg" />
+        </div>
+
+        <script>
+            // a function to transition the opacity of the images every X seconds
+            function transitionImages() {
+                const images =
+                    document.querySelectorAll(".login-cover img");
+                const activeImage = document.querySelector(
+                    ".login-cover img.active"
+                );
+
+                // get the index of the active image
+                const activeIndex = Array.from(images).indexOf(activeImage);
+
+                // remove the active class from the active image
+                activeImage.classList.remove("active");
+
+                // get the next image in the array
+                const nextImage = images[(activeIndex + 1) % images.length];
+
+                // add the active class to the next image
+                nextImage.classList.add("active");
+            }
+
+            // call the transitionImages function every X seconds (milliseconds)
+            setInterval(transitionImages, 7500);
+        </script>
 
     </div>
 

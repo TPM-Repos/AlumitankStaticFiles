@@ -3,10 +3,10 @@
 const config = {
     // the full path the site running the DriveWorks Live API
     // serverUrl: "https://dw21api.yourdomain.com",
-    serverUrl: "",
+    serverUrl: "http://localhost:81/",
     // The default alias for the DriveWorks Group
     // This is a custom string that must match the name in the ConfigUser.xml file
-    groupAlias: "",
+    groupAlias: "AC",
     // (Optional) Configure ping & update intervals - in seconds
     // A Specification will timeout after a configured period of inactivity (see DriveWorksConfigUser.xml).
     // This function prevents a Specification timing out as long as the page is in view.
@@ -70,9 +70,9 @@ const config = {
     },
     logo: {
         // login: "dist/img/logo-dark.svg",
-        login: "dist/img/tpm_logo_color.png",
+        login: "dist/img/logo.png",
         // sidebar: "dist/img/logo-light.svg",
-        sidebar: "dist/img/tpm_logo_white.png",
+        sidebar: "dist/img/logo.png",
     },
 
 };
